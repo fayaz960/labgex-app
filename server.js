@@ -19,7 +19,7 @@ app.get('/tests', (req, res) => {
 });
 
 app.get('/tests/:id', (req, res) => {
-  const test = labTests.find(t => t.id === req.params.id);
+  const test = labTests.find(t => t.id === Number(req.params.id));
   if (!test) {
     return res.status(404).json({ error: 'Test not found' });
   }
