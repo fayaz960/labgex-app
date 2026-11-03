@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/tests', (req, res) => {
-  res.json(labTests);
+  res.json({ count: labTests.length, tests: labTests });
 });
 
 app.get('/tests/:id', (req, res) => {
