@@ -7,7 +7,7 @@ const PORT = 3000;
 const labTests = [
   { id: 1, name: 'Blood Sugar', price: 200 },
   { id: 2, name: 'Thyroid Profile', price: 500 },
-  { id: 3, name: 'Vitamin D', price: 800 }
+  { id: 3, name: 'Vitamin D', price: 750 }
 ];
 
 app.get('/', (req, res) => {
