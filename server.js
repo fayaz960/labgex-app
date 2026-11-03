@@ -18,6 +18,14 @@ app.get('/tests', (req, res) => {
   res.json(labTests);
 });
 
+app.get('/tests/:id', (req, res) => {
+  const test = labTests.find(t => t.id === req.params.id);
+  if (!test) {
+    return res.status(404).json({ error: 'Test not found' });
+  }
+  res.json(test);
+});
+
 app.listen(PORT, () => {
   console.log(`LabGex v${version} running on port ${PORT}`);
 });
